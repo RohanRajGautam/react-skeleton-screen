@@ -26,6 +26,9 @@
 .skeleton-wrapper {
   margin: 20px auto;
   padding: 10px 15px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
 }
 
 /* skeleton profile */

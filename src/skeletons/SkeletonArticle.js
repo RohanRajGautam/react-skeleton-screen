@@ -12,7 +12,7 @@ const SkeletonArticle = ({ theme }) => {
         <SkeletonElement type='text' />
         <SkeletonElement type='text' />
       </div>
-      <Shimmer />
+          <Shimmer />
     </div>
   );
 };
