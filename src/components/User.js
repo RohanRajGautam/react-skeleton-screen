@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SkeletonProfile from '../skeletons/SkeletonProfile';
 
 const User = () => {
 
@@ -14,20 +15,19 @@ useEffect(() => {
 
 
   return (
-      <div className="user">
-
-    <div>
-      <h2>User Details</h2>
-    </div>
-    {profile && (
-        <div className="profile">
-            <h3>{profile.username}</h3>
-            <p>{profile.email}</p>
-            <a href={profile.website}>{profile.website}</a>
-        </div>
-    )}
-    { !profile && <div>loading...</div> }
+    <div className='user'>
+      <div>
+        <h2>User Details</h2>
       </div>
+      {profile && (
+        <div className='profile'>
+          <h3>{profile.username}</h3>
+          <p>{profile.email}</p>
+          <a href={profile.website}>{profile.website}</a>
+        </div>
+      )}
+      {!profile && <SkeletonProfile />}
+    </div>
   );
 };
 
